@@ -1,0 +1,8 @@
+#index:
+#    path: /
+#    controller: App\Controller\itemController::index
+
+
+delete:
+    path: /item/delete/{id}
+    controller: App\Controller\itemController::delete

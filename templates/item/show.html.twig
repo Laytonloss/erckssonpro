@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{item.itemname}}} {% endblock %}
+
+
+{% block body %}
+
+	<h1>{{ item.itemname }}</h1>
+	<h4>{{ item.type }}</h4>
+	<p>{{ item.description }}</p>
+	<hr>
+	<h5>{{ item.price }}  BsS</h5>
+	<hr>
+	<a href="/">Regresa</a>
+
+
+{% endblock %}

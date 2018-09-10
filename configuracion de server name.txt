@@ -1,0 +1,5 @@
+para modificar host entrar como administrador en system32/drivers/etc(colocar mostrar todos los archivos); 
+archivo: host file 
+ escribir la ip local: 127.0.0.1
+ colocar el servername que modificaste en el archivo apache al lado de la ip
+reiniciar apache
