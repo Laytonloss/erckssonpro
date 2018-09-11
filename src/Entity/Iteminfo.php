@@ -38,57 +38,57 @@ class Iteminfo
      */
     private $price;
 
-    public function getId(): ?int
+    public function getId()
     {
         return $this->id;
     }
 
-    public function setId($id): self
+    public function setId(int $id)
     {
         $this->id = $id;
     }
 
-    public function getItemname(): ?string
+    public function getItemname()
     {
         return $this->itemname;
     }
 
-    public function setItemname($itemname): self
+    public function setItemname(string $itemname)
     {
         $this->itemname = $itemname;
     }
 
 
-    public function getType(): ?string
+    public function getType()
     {
         return $this->type;
     }
 
-    public function setType($type): self 
+    public function setType(string $type) 
     {
         $this->type = $type;
     }
 
-    public function getDescription(): ?string
+    public function getDescription()
     {
         return $this->description;
     }
 
-    public function setDescription($description): self 
+    public function setDescription(string $description)
     {
         $this->description = $description;
     }
 
-    public function getPrice(): ?float
+    public function getPrice()
     {
         return $this->price;
     }
 
-    public function setPrice(float $price): self
+    public function setPrice(float $price)
     {
         $this->price = $price;
 
-        return $this;
+      //  return $this;
     }
 
 
