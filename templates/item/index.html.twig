@@ -6,6 +6,7 @@
 
 	{% if items %}
 
+
 		<table id="items" class="table table-stripped">
 			<thead>
 				<tr>
@@ -22,7 +23,7 @@
 					<tr>
 						<td><a href="/item/{{item.id}}">{{item.itemname}}</a></td>
 					
-						<td>{{item.type}}</td>
+						<td><a href="/item/category/{{item.type}}">{{item.type}}</a></td>
 					
 						<td>{{item.description}}</td>
 

@@ -94,6 +94,16 @@
 
 
 		/**
+		*	@Route("/item/category/{type}", name="item_category")
+		*/
+
+		public function category($type) {
+			$item = $this->getDoctrine()->getRepository(Iteminfo::class)->fcat($type);
+			return $this->render('item/category.html.twig', array('item' => $item));
+		}
+
+
+		/**
   	   *  @Route("/item/delete/{id}", methods={"DELETE"}, name="delete")
    	   *  
    	 	 */

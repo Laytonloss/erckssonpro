@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Ercksson Project Category {% endblock %}
+
+{% block body %} 
+
+	{% if item %}
+
+		<table id="items" class="table table-stripped">
+			<thead>
+				<tr>
+					<th>Items</th>
+					<th>Type</th>
+					<th>Description</th>
+					<th>Price</th>
+					<th>Edit</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for items in item %}
+					<tr>
+						<td><a href="/item/{{items.id}}">{{items.itemname}}</a></td>
+					
+						<td><a href="/item/{{items.type}}">{{items.type}}</a></td>
+					
+						<td>{{items.description}}</td>
+
+						<td>{{items.price}}</td>
+					
+						<td><a href="/item/edit/{{items.id}}" class="btn btn-light">Edit</a></td>
+					
+						<td><a href="#" class="btn btn-danger delete-item" data-id='{{items.id}}'>X</a></td>
+					</tr>
+				{% endfor %}
+			</tbody>
+
+		</table>
+
+	{% else %}
+
+		<p>No hay items en esta categoria</p>
+
+	{% endif %}
+
+
+
+{% endblock %}

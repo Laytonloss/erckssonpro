@@ -47,4 +47,18 @@ class IteminfoRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function fcat($category): array
+    {
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT c
+        FROM App\entity\Iteminfo c
+        WHERE c.type = :category
+        ORDER BY c.itemname ASC'
+        )-> setParameter('category', $category);
+
+        return $query->execute();
+    }
 }
